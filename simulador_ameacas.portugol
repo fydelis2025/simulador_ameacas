@@ -1,0 +1,195 @@
+// =====================================================================
+// 🛡️ SIMULADOR DE ANÁLISE COMPORTAMENTAL DE RANSOMWARE (EDR/SIEM)
+// =====================================================================
+// MÓDULO: Análise Forense e Resposta a Incidentes (FydelGuard Engine)
+// LINGUAGEM: Portugol (Português Estruturado)
+// VERSÃO: 2.5-PRO (Build 2026.09)
+// AUTOR: Adiel Santos Fontes
+// LOCAL: Salvador - BA 🇧🇷
+// 
+// ⚠️ AVISO LEGAL E ÉTICO:
+// Este script é estritamente conceitual e educacional para fins de 
+// auditoria defensiva, simulação de TTPs (MITRE ATT&CK) e conscientização.
+// Nenhuma rotina de destruição, modificação ou criptografia real é executada.
+// =====================================================================
+
+programa
+{
+    // =================================================================
+    // 📊 ESTRUTURAS DE DADOS E CONFIGURAÇÕES DO SISTEMA
+    // =================================================================
+    
+    // Alvos simulados — Categoria, Extensões, Criticidade
+    cadeia catNomes[4] = {
+        "Documentos Corporativos",
+        "Fontes de Sistema / Baixo Nível",
+        "Bancos de Dados Transacionais",
+        "Mídia e Ativos Gráficos"
+    }
+    cadeia catExtensoes[4] = {
+        ".docx / .pdf / .xlsx",
+        ".cpp / .h / .pro / .asm",
+        ".db / .sql / .sqlite",
+        ".jpg / .png / .mp4"
+    }
+    cadeia catNivel[4] = {
+        "CRÍTICO",
+        "ALTO",
+        "MÁXIMO",
+        "MÉDIO"
+    }
+
+    // Vetor de IPs de Comando & Controle (C2) simulados para telemetria
+    cadeia servidoresC2[3] = {
+        "185.220.101.5:443 (Tor Hidden Relay - Exit Node Alpha)",
+        "45.154.255.88:8080 (Infratek Bulletproof Hosting - NL)",
+        "192.241.140.21:9001 (DarkWeb Proxy Gateway - Onion v3)"
+    }
+
+    // Hashes SHA-256 simulados de amostras conhecidas para detecção YARA
+    cadeia hashesAmostras[2] = {
+        "a79316f4e667861b5853b890a5a3a79316f4e667861b5853b890a5a3df4e (Conficker.B Variant)",
+        "ed01ebfbc9eb5bbea545af4d01bf5f107166181fb4572b221065a497939a5f41 (WannaCry.Mod Core)"
+    }
+
+    // =================================================================
+    // 🚀 PONTO DE ENTRADA PRINCIPAL
+    // =================================================================
+    funcao inicio()
+    {
+        exibirBannerCorporativo()
+        executarFase1_VarreduraEEnumeracao()
+        executarFase2_SimulacaoCriptografica()
+        executarFase3_ComunicacaoRedeC2()
+        executarFase4_MatrizMitigacaoEEDR()
+        exibirRodaprodutividade()
+    }
+
+    // =================================================================
+    // 🎨 BANNER E CABEÇALHO TÉCNICO
+    // =================================================================
+    funcao exibirBannerCorporativo()
+    {
+        desenharBarraDupla()
+        escreva("\n")
+        escreva(" [SEC-OPS] FydelGuard EDR Simulation Environment v2.5\n")
+        escreva(" Módulo: Threat Intelligence & Behavior Analysis\n")
+        escreva(" Status do Sistema: SIMULAÇÃO SEGURA EM AMBIENTE ISOLADO\n")
+        desenharBarraDupla()
+        escreva("\n\n")
+        escreva("[INFO] Inicializando motores de heurística e análise estática...\n")
+        escreva("[INFO] Carregando assinaturas YARA e regras comportamentais...\n")
+        escreva("[OK]  Ambiente pronto. Nenhum arquivo real será modificado.\n\n")
+    }
+
+    // =================================================================
+    // 🔍 FASE 1: VARREDURA E ENUMERAÇÃO DE ALVOS
+    // =================================================================
+    funcao executarFase1_VarreduraEEnumeracao()
+    {
+        escreva("----------------------------------------------------\n")
+        escreva(" [FASE 1/4] ENUMERAÇÃO DE SISTEMA DE ARQUIVOS (T1083)\n")
+        escreva("----------------------------------------------------\n")
+        escreva("Mecanismo simulado percorre árvores de diretórios à procura\n")
+        escreva("de ativos de alto valor comercial ou pessoal:\n\n")
+
+        para(inteiro i = 0; i < 4; i++)
+        {
+            escreva("  [SCAN] Categoria: ", catNomes[i], "\n")
+            escreva("         Extensões : ", catExtensoes[i], "\n")
+            escreva("         Criticidade: ", catNivel[i], "\n")
+            escreva("         Status    : Identificado e indexado na fila de processamento.\n\n")
+        }
+
+        escreva("💡 Detalhe Técnico: A varredura real utiliza multithreading\n")
+        escreva("   para mapear partições NTFS/EXT4 em segundos, priorizando\n")
+        escreva("   pastas como 'Documentos', 'Desktop' e bases de dados locais.\n\n")
+    }
+
+    // =================================================================
+    // 🔒 FASE 2: SIMULAÇÃO CRIPTOGRÁFICA (AES-256 + RSA-2048)
+    // =================================================================
+    funcao executarFase2_SimulacaoCriptografica()
+    {
+        escreva("----------------------------------------------------\n")
+        escreva(" [FASE 2/4] MOTOR DE CIFRAGEM HÍBRIDA (T1486)\n")
+        escreva("----------------------------------------------------\n")
+        escreva("Simulando o encapsulamento criptográfico dos dados:\n\n")
+        escreva("  1. Geração de chave simétrica de sessão (AES-256-CBC)...\n")
+        escreva("  2. Cifragem de blocos de dados nos diretórios mapeados...\n")
+        escreva("  3. Assinatura da chave de sessão com chave pública RSA-2048...\n")
+        escreva("  4. Injeção de extensão proprietária e nota de resgate (.lock)\n\n")
+
+        escreva("⚠️  ANÁLISE FORENSE DA AMOSTRA:\n")
+        escreva("   Hash SHA-256 Identificado:\n")
+        escreva("   -> ", hashesAmostras[1], "\n\n")
+        escreva("💡 Conclusão Técnica: Sem acesso à chave privada residente no servidor\n")
+        escreva("   C2 externo, a reversão matemática do RSA-2048 é inviável no\n")
+        escreva("   estado atual da computação clássica.\n\n")
+    }
+
+    // =================================================================
+    // 🌐 FASE 3: COMUNICAÇÃO DE REDE E EXFILTRAÇÃO (C2)
+    // =================================================================
+    funcao executarFase3_ComunicacaoRedeC2()
+    {
+        escreva("----------------------------------------------------\n")
+        escreva(" [FASE 3/4] TELEMETRIA E BEACONS DE REDE (T1071)\n")
+        escreva("----------------------------------------------------\n")
+        escreva("Estabelecendo túneis de comunicação com nós de Comando & Controle:\n\n")
+
+        para(inteiro i = 0; i < 3; i++)
+        {
+            escreva("  [NET] Tentativa de conexão -> ", servidoresC2[i], "\n")
+            escreva("        Protocolo: HTTPS / Onion Routing (SOCKS5)\n")
+            escreva("        Status: Handshake simulado com sucesso (Porta furtiva)\n\n")
+        }
+
+        escreva("💡 Alerta de Monitoramento: Firewalls modernos e soluções EDR\n")
+        escreva("   analisam o comportamento de conexões anômalas para portas\n")
+        escreva("   não padronizadas e tráfego criptografado para IPs suspeitos.\n\n")
+    }
+
+    // =================================================================
+    // 🛡️ FASE 4: MATRIZ DE MITIGAÇÃO E DEFESA ATIVA (EDR / SIEM)
+    // =================================================================
+    funcao executarFase4_MatrizMitigacaoEEDR()
+    {
+        escreva("----------------------------------------------------\n")
+        escreva(" [FASE 4/4] PROTOCOLOS DE RESPOSTA E MITIGAÇÃO (DEFESA)\n")
+        escreva("----------------------------------------------------\n")
+        escreva("Contramedidas obrigatórias para blindagem de infraestruturas:\n\n")
+        escreva("  [✔] 1. Implementação rigorosa de Backup 3-2-1 (Offline/Immutable)\n")
+        escreva("  [✔] 2. Segmentação de rede com políticas restritivas no UFW/Firewall\n")
+        escreva("  [✔] 3. Aplicação imediata de patches de segurança (Ex: SMBv1/EternalBlue)\n")
+        escreva("  [✔] 4. Uso de ferramentas de Endpoint Detection and Response (EDR)\n")
+        escreva("  [✔] 5. Políticas de privilégio mínimo (Principle of Least Privilege)\n\n")
+    }
+
+    // =================================================================
+    // 📌 RODAPÉ TÉCNICO E ASSINATURA
+    // =================================================================
+    funcao exibirRodaprodutividade()
+    {
+        desenharBarraDupla()
+        escreva("\n")
+        escreva(" [STATUS] Simulação concluída com sucesso.\n")
+        escreva(" 'O conhecimento técnico avançado existe para PROTEGER, construir\n")
+        escreva("  sistemas resilientes e garantir a soberania digital.'\n")
+        escreva("\n")
+        escreva(" Desenvolvido por Adiel Santos Fontes • Salvador, Bahia 🇧🇷\n")
+        desenharBarraDupla()
+        escreva("\n")
+    }
+
+    // =================================================================
+    // 🛠️ FUNÇÕES AUXILIARES DE FORMATAÇÃO GRÁFICA
+    // =================================================================
+    funcao desenharBarraDupla()
+    {
+        para(inteiro c = 0; c < 65; c++)
+        {
+            escreva("=")
+        }
+    }
+}
