@@ -1,5 +1,5 @@
 # 🛡️ FydelGuard — Simulador de Análise Comportamental de Ransomware
-## Módulo de Análise Forense e Resposta a Incidentes | EDR/SIEM Simulation
+## Módulo de Análise Forense e Resposta a Incidentes
 
 > **Versão 2.5-PRO • Build 2026.09**  
 > Adiel Santos Fontes • Salvador — Bahia 🇧🇷  
@@ -19,21 +19,22 @@ Este repositório contém um **simulador estritamente conceitual e educacional**
 
 ---
 
-## 📋 SOBRE O PROJETO
+## 💻 SOBRE O PROJETO
 
-O **FydelGuard** é um simulador educacional que reproduz, de forma didática e segura, o ciclo de vida de um ataque de ransomware — desde a enumeração de alvos até a comunicação com servidores de Comando & Controle — e, principalmente, **apresenta as contramedidas eficazes de defesa**.
+O **FydelGuard** é um simulador educacional escrito em **Portugol** — a linguagem de programação em português — que reproduz de forma didática e segura o ciclo de vida de um ataque de ransomware, desde a enumeração de alvos até a comunicação com servidores de Comando & Controle, e principalmente **apresenta as contramedidas eficazes de defesa**.
 
 ### 🎯 Objetivos
 - 📚 Ensinar como ameaças reais operam (TTPs — Táticas, Técnicas e Procedimentos)
 - 🛡️ Demonstrar protocolos de mitigação e defesa ativa
 - 🔬 Familiarizar com terminologia de segurança corporativa (EDR, SIEM, MITRE ATT&CK)
-- 🌍 Promover cultura de segurança digital e soberania tecnológica
+- 🇧🇷 Promover a programação e a segurança digital **na nossa língua**
+- 🌍 Garantir cultura de segurança e soberania tecnológica
 
 ---
 
 ## 🔬 FLUXO DE SIMULAÇÃO — 4 FASES
 
-| Fase | Descrição | Técnica MITRE |
+| Fase | Descrição | Referência MITRE |
 |---|---|---|
 | **🔍 Fase 1** | Enumeração de sistema de arquivos — varredura e classificação de ativos por criticidade | T1083 |
 | **🔒 Fase 2** | Simulação de cifragem híbrida — AES-256 + RSA-2048, encapsulamento de dados | T1486 |
@@ -72,20 +73,13 @@ O **FydelGuard** é um simulador educacional que reproduz, de forma didática e 
 
 ---
 
-## 💻 COMO EXECUTAR
+## 🖥️ COMO EXECUTAR
 
 ### Pré-requisitos
-- **Portugol Studio** ou **Webstudio Portugol** (ambiente gratuito e multiplataforma)
+- **Portugol Studio** ou **Webstudio Portugol** — ambiente gratuito e multiplataforma
 
 ### Passo a Passo
-1. Clone este repositório ou baixe o arquivo `fydelguard_v2.5.pro`
-2. Abra no Portugol Studio / Webstudio
+1. Clone ou baixe este repositório
+2. Abra o arquivo `fydelguard_v2.5.pro` no Portugol Studio / Webstudio
 3. Clique em **Executar ▶️**
 4. Leia cada etapa com atenção e aplique as recomendações de proteção!
-
-```bash
-# Estrutura do repositório
-FydelGuard/
-├── fydelguard_v2.5.pro       ← Código principal (simulador)
-├── README.md                  ← Este arquivo
-└── LICENSE                    ← Licença: Uso Educacional
