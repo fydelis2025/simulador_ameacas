@@ -1,9 +1,10 @@
 # 🛡️ FydelGuard — Simulador de Análise Comportamental de Ransomware
 ## Módulo de Análise Forense e Resposta a Incidentes
 
-> **Versão 2.5-PRO • Build 2026.09**  
-> Adiel Santos Fontes • Salvador — Bahia 🇧🇷  
-> *"O conhecimento técnico avançado existe para PROTEGER, construir sistemas resilientes e garantir a soberania digital."*
+**Versão 2.5-PRO • Build 2026.09**  
+Adiel Santos Fontes • Salvador — Bahia 🇧🇷
+
+*"O conhecimento técnico avançado existe para PROTEGER, construir sistemas resilientes e garantir a soberania digital."*
 
 ---
 
@@ -61,7 +62,7 @@ O **FydelGuard** é um simulador educacional escrito em **Portugol** — a lingu
 
 ## 🛡️ PROTOCOLOS DE MITIGAÇÃO — DEFESA EFETIVA
 
-> Estas são as contramedidas comprovadas contra ransomware:
+Estas são as contramedidas comprovadas contra ransomware:
 
 | # | Medida | Impacto |
 |---|---|---|
@@ -80,6 +81,6 @@ O **FydelGuard** é um simulador educacional escrito em **Portugol** — a lingu
 
 ### Passo a Passo
 1. Clone ou baixe este repositório
-2. Abra o arquivo `fydelguard_v2.5.pro` no Portugol Studio / Webstudio
+2. Abra o arquivo `simulador_ameacas.portugol` no Portugol Studio / Webstudio
 3. Clique em **Executar ▶️**
 4. Leia cada etapa com atenção e aplique as recomendações de proteção!
